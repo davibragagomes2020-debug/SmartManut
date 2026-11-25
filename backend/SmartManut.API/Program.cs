@@ -2,15 +2,17 @@
 using SmartManut.API.Data;
 using SmartManut.API.Models;
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
 var builder = WebApplication.CreateBuilder(args);
 
 var connectionString =
     builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? Environment.GetEnvironmentVariable("ConnectionStrings__DefaultConnection")
-    ?? "Server=DESKTOP-72IT083\\SQLEXPRESS;Database=SmartManutDB;Trusted_Connection=True;TrustServerCertificate=True;";
+    ?? Environment.GetEnvironmentVariable("DATABASE_URL")
+    ?? "Host=ep-royal-mud-bd8q4c2m-pooler.c-8.us-east-2.aws.neon.tech;Database=neondb;Username=neondb_owner;Password=npg_IAl5T2QXUxvC;SSL Mode=Require;Trust Server Certificate=true";
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(connectionString));
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -64,7 +66,6 @@ app.UseSwaggerUI();
 app.UseCors("PermitirTudo");
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 
