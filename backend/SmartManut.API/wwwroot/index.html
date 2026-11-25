@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"><title>SmartManut - Equipamentos</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/equipamentos.css"></head>
+<body>
+<nav class="sidebar"><div class="sidebar-brand"><i class="fa-solid fa-cogs"></i> SmartManut</div><ul class="sidebar-menu">
+<li><a href="index.html" class="active"><i class="fa-solid fa-wrench"></i> Equipamentos</a></li>
+<li><a href="ordens.html"><i class="fa-solid fa-file-lines"></i> Ordens de Serviço</a></li>
+<li><a href="pecas.html"><i class="fa-solid fa-boxes-stacked"></i> Peças & Stock</a></li>
+<li><a href="setores.html"><i class="fa-solid fa-building"></i> Setores</a></li>
+<li><a href="fornecedores.html"><i class="fa-solid fa-truck"></i> Fornecedores</a></li>
+<li><a href="utilizadores.html"><i class="fa-solid fa-users"></i> Utilizadores</a></li>
+<li><a href="perfis.html"><i class="fa-solid fa-shield-halved"></i> Perfis de Acesso</a></li>
+<li><a href="historico.html"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</a></li>
+</ul></nav>
+<main class="main-content"><h2><i class="fa-solid fa-wrench"></i> Gestão de Equipamentos</h2>
+<div class="card"><h3>Registar Novo Equipamento</h3><form id="formDados"><div class="form-row">
+<div class="form-group"><label>Código</label><input type="text" id="codigo" required placeholder="Ex: EQ-01"></div>
+<div class="form-group"><label>Nome</label><input type="text" id="nome" required placeholder="Ex: Torno CNC"></div>
+<div class="form-group"><label>Setor</label><select id="setorId" required></select></div>
+</div><button type="submit" class="btn"><i class="fa-solid fa-floppy-disk"></i> Salvar Equipamento</button></form></div>
+<div class="card"><h3>Equipamentos Registados</h3><table><thead><tr><th>ID</th><th>Código</th><th>Nome</th><th>Status</th><th>Setor ID</th></tr></thead><tbody id="tabelaDados"></tbody></table></div>
+</main><script src="js/equipamentos.js"></script></body></html>

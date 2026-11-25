@@ -1,0 +1,8 @@
+﻿bin/
+obj/
+*.db
+*.sqlite
+*.sqlite3
+.vs/
+.vscode/
+appsettings.Development.json

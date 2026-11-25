@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html><html lang="pt"><head><meta charset="UTF-8"><title>SmartManut - Setores</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="css/setores.css"></head>
+<body>
+<nav class="sidebar"><div class="sidebar-brand"><i class="fa-solid fa-cogs"></i> SmartManut</div><ul class="sidebar-menu">
+<li><a href="index.html"><i class="fa-solid fa-wrench"></i> Equipamentos</a></li>
+<li><a href="ordens.html"><i class="fa-solid fa-file-lines"></i> Ordens de Serviço</a></li>
+<li><a href="pecas.html"><i class="fa-solid fa-boxes-stacked"></i> Peças & Stock</a></li>
+<li><a href="setores.html" class="active"><i class="fa-solid fa-building"></i> Setores</a></li>
+<li><a href="fornecedores.html"><i class="fa-solid fa-truck"></i> Fornecedores</a></li>
+<li><a href="utilizadores.html"><i class="fa-solid fa-users"></i> Utilizadores</a></li>
+<li><a href="perfis.html"><i class="fa-solid fa-shield-halved"></i> Perfis de Acesso</a></li>
+<li><a href="historico.html"><i class="fa-solid fa-clock-rotate-left"></i> Histórico</a></li>
+</ul></nav>
+<main class="main-content"><h2><i class="fa-solid fa-building"></i> Gestão de Setores</h2>
+<div class="card"><h3>Registar Novo Setor</h3><form id="formDados"><div class="form-row">
+<div class="form-group"><label>Nome do Setor</label><input type="text" id="nomeSetor" required placeholder="Ex: Usinagem"></div>
+<div class="form-group"><label>Localização</label><input type="text" id="localizacao" required placeholder="Ex: Bloco B"></div>
+</div><button type="submit" class="btn"><i class="fa-solid fa-floppy-disk"></i> Salvar Setor</button></form></div>
+<div class="card"><h3>Setores Registados</h3><table><thead><tr><th>ID</th><th>Nome do Setor</th><th>Localização</th></tr></thead><tbody id="tabelaDados"></tbody></table></div>
+</main><script src="js/setores.js"></script></body></html>
